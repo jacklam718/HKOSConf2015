@@ -1,0 +1,123 @@
+<template name="talk">
+  <div class="reveal talk bg" data-ibg-bg="images/dm-shirt-3.png">
+    <div class="slides">
+      <section class="intro">
+        <h2 class="intro-title">Using Meteor.Js to create real-time applications</h2>
+
+        <p><h4 class="intro-author-name">Jack Lam <small class="intro-author-job-title">(Software Developer)</small></h4></p>
+        <div class="intro-contact">
+          <p>GitHub: <a href="https://github.com/jacklam718" target="_blank">https://github.com/jacklam718</a></p>
+          <p>Contact Me: <a href="mailto:jacklam718@gmail.com">jacklam718@gmail.com</a></p>
+        </div>
+      </section>
+
+      <section class="about-meteor">
+        <p>What is MeteorJs?</p>
+        <img src="images/meteor_logo.png" alt="meteor js background image">
+      </section>
+
+      <section class="install">
+        How to install MeteorJs?
+        <p class="fragment" data-fragment-index="0">
+          <pre>
+            <code data-trim contenteditable="true" class="hljs bash">
+              curl https://install.meteor.com |  /bin/sh
+            </code>
+          </pre>
+        </p>
+      </section>
+
+      <section class="reason">
+        <section>
+          Why meteor?
+          <!-- 1 -->
+          <p class="fragment" data-fragment-index="0">
+            (1) Your applications are real-time by default.
+          </p>
+          <!-- 2 -->
+          <p class="fragment" data-fragment-index="1">
+            (2) You can develop with just one language.
+          </p>
+        </section>
+
+        <section>
+          <!-- 3 -->
+          (3) You can save a lot of time with meteor smart packages.
+          <p class="fragment" data-fragment-index="0">
+            Let’s say you want to create a user accounts system within a Meteor project. How might you approach it? If your first thought was, “Well, I’d create a collection for the user’s data,” then you’re already thinking too hard.
+            In Meteor, this is how we create an accounts system:
+          </p>
+          <pre class="fragment" data-fragment-index="0">
+            <code data-trim contenteditable="true" class="hljs bash">
+              meteor add accounts-password
+
+              #or facebook
+              meteor add accounts-facebook
+
+              #Meteor also provides an accounts-ui package
+              meteor add accounts-ui
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <!-- 4 -->
+          (4) It’s optimized for developer happiness.
+
+          <p class="fragment" data-fragment-index="0">
+            Just about every framework markets itself as a better and more enjoyable way to work. What I appreciate though is Meteor’s attention to detail in holding true to its promise of optimizing for developer happiness.
+            Take this code, for instance:
+          </p>
+
+          <pre class="fragment" data-fragment-index="0">
+            <!-- <code data-trim contenteditable="true" class="xml hljs">
+              <title>Title</title>
+
+              <style>body {width: 500px;}</style>
+
+              <script type="application/javascript">
+                function $init() {return true;}
+              </script>
+
+              <body>
+                <p checked class="title" id='title'>Title</p>
+                here goes the rest of the page
+              </body> -->
+          </pre>
+        </section>
+
+        <section>
+          <!-- 5 -->
+          (5) It’s friendly to beginner developers.
+        </section>
+      </section>
+
+      <section class="latency-compensation">
+        <section>
+          Latency compensation
+          <p>
+            In a traditional application, when a user does some action on an app, they have to wait until the request is processed on the server before the changes are reflected by the UI. But with latency compensation, users no longer need to wait. The result of an action is reflected by the browser immediately. This is a built-in feature of Meteor and you can use it very easily.
+          </p>
+        </section>
+
+        <section>
+          Without latency compensation (traditional)
+          <img src="images/without_latency_componsation.png" alt="without latency componsation" style="background-color: white;">
+        </section>
+
+        <section>
+          With latency compensation (meteor way)
+          <img src="images/latency_componsation.png" alt="latency componsation" style="background-color: white;"/>
+        </section>
+      </section>
+
+      <section class="usage">
+        Example app
+      </section>
+
+      <section class="usage">
+        Q&A
+      </section>
+    </div>
+  </div>
+</template>
